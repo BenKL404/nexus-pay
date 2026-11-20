@@ -1,5 +1,10 @@
 # Nexus Pay
 
+[![CI](https://github.com/BenKL404/nexus-pay/actions/workflows/ci.yml/badge.svg)](https://github.com/BenKL404/nexus-pay/actions/workflows/ci.yml)
+![Java 21](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot 3.5](https://img.shields.io/badge/Spring%20Boot-3.5-6DB33F)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791)
+
 Passerelle d'agrégation de paiements **Mobile Money** pour le Togo (T-Money, Flooz).
 Un marchand intègre une seule API ; Nexus Pay route le paiement vers le bon opérateur et suit son statut jusqu'au bout.
 
