@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: nexuspay
+      POSTGRES_USER: nexuspay
+      POSTGRES_PASSWORD: nexuspay
+    ports:
+      - "5432:5432"
+    volumes:
+      - nexuspay-data:/var/lib/postgresql/data
+
+volumes:
+  nexuspay-data:

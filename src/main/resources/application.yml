@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: nexus-pay
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/nexuspay}
+    username: ${DB_USER:nexuspay}
+    password: ${DB_PASSWORD:nexuspay}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+
+nexuspay:
+  webhooks:
+    # À fournir par variables d'environnement en production.
+    tmoney-secret: ${TMONEY_WEBHOOK_SECRET:dev-tmoney-secret}
+    flooz-secret: ${FLOOZ_WEBHOOK_SECRET:dev-flooz-secret}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
